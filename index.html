@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Culture and Heritage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#heritage-sites">Heritage Sites</a></li>
+                <li><a href="#map">Map</a></li>
+
+                <!-- Dropdown for States with search -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">States &#x25BC;</a>
+                    <div class="dropdown-content">
+                        <input type="text" id="stateSearch" onkeyup="filterStates()" placeholder="Select State..." />
+                        <a href="#andhra">Andhra Pradesh</a>
+                        <a href="#arunachal">Arunachal Pradesh</a>
+                        <a href="#assam">Assam</a>
+                        <a href="#bihar">Bihar</a>
+                        <a href="#chhattisgarh">Chhattisgarh</a>
+                        <a href="#goa">Goa</a>
+                        <a href="#gujarat">Gujarat</a>
+                        <a href="#haryana">Haryana</a>
+                        <a href="#himachal">Himachal Pradesh</a>
+                        <a href="#jharkhand">Jharkhand</a>
+                        <a href="#karnataka">Karnataka</a>
+                        <a href="#kerala">Kerala</a>
+                        <a href="#madhya">Madhya Pradesh</a>
+                        <a href="#maharashtra">Maharashtra</a>
+                        <a href="#manipur">Manipur</a>
+                        <a href="#meghalaya">Meghalaya</a>
+                        <a href="#mizoram">Mizoram</a>
+                        <a href="#nagaland">Nagaland</a>
+                        <a href="#odisha">Odisha</a>
+                        <a href="#punjab">Punjab</a>
+                        <a href="#rajasthan">Rajasthan</a>
+                        <a href="#sikkim">Sikkim</a>
+                        <a href="#tamil">Tamil Nadu</a>
+                        <a href="#telangana">Telangana</a>
+                        <a href="#tripura">Tripura</a>
+                        <a href="#uttar-pradesh">Uttar Pradesh</a>
+                        <a href="#uttarakhand">Uttarakhand</a>
+                        <a href="#west-bengal">West Bengal</a>
+                    </div>
+                </li>
+
+                <!-- Search bar -->
+                <li class="search-container">
+                    <i class="fa fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search...">
+                </li>
+
+                <!-- Profile Icon that redirects to profile page -->
+                <li>
+                    <a href="profile.html">
+                        <i class="fa fa-user profile-icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Home Section -->
+    <section id="home">
+        
+        
+    </section>
+
+    <!-- Heritage Sites Section -->
+    <section id="heritage-sites">
+        <h1>Top Heritage Sites</h1>
+        <div class="heritage-sites">
+            <div class="heritage-site">
+                <img src="taj mahal.jpg" alt="Taj Mahal">
+                <h3>Taj Mahal</h3>
+                <button onclick="location.href='taj-mahal.html'">Explore</button>
+
+            </div>
+            <div class="heritage-site">
+                <img src="jai.jpeg" alt="Great Wall of China">
+                <h3>Jaipur</h3>
+                <button>Explore</button>
+            </div>
+            <div class="heritage-site">
+                <img src="hamp.jpeg" alt="Machu Picchu">
+                <h3>Hampi</h3>
+                <button>Explore</button>
+            </div>
+            <div class="heritage-site">
+                <img src="qutu.jpg" alt="Pyramids of Giza">
+                <h3>Qutub Minar</h3>
+                <button>Explore</button>
+            </div>
+            <div class="heritage-site">
+                <img src="Khajuraho Temple.jpeg" alt="Colosseum">
+                <h3>Khajuraho Temple</h3>
+                <button>Explore</button>
+            </div>
+            <div class="heritage-site">
+                <img src="Ajanta and Ellora Caves.webp" alt="Stonehenge">
+                <h3>Ajanta and Ellora Caves</h3>
+                <button>Explore</button>
+            </div>
+            <div class="heritage-site">
+                <img src="The Great Living Chola Temples.jpg" alt="Petra">
+                <h3>The Great Living Chola Temples</h3>
+                <button>Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map">
+        <h2>Explore on Map</h2>
+        <div id="map-container"></div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile">
+        <h2>Profile</h2>
+        <form id="profileForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="emailProfile">Email:</label>
+            <input type="email" id="emailProfile" required>
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </section>
+
+    <!-- Help & Support Section -->
+    <section id="help-support">
+        <h2>Help & Support</h2>
+        <p>For any assistance, contact us at help@CultureAndHeritageapp.com or call 000-000-000.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Terms and Conditions | Privacy Policy</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to filter the states in the dropdown menu
+        function filterStates() {
+            var input, filter, a, i;
+            input = document.getElementById("stateSearch");
+            filter = input.value.toUpperCase();
+            div = document.getElementsByClassName("dropdown-content")[0];
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

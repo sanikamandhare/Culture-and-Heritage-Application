@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Mahal</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Taj Mahal Section */
+        #taj-mahal {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        /* History Section */
+        .history {
+            text-align: left;
+            margin-top: 20px;
+            padding: 0 20px; /* Optional padding for better readability */
+        }
+
+        /* Services Section */
+        .services {
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .services h2 {
+            margin-bottom: 20px;
+        }
+
+        .service-block {
+            display: inline-block;
+            background-color: #ded5c5;
+            width: 30%; /* Adjust the width for three blocks */
+            margin: 0 1.5%; /* Space between blocks */
+            text-align: center;
+            border: 2px solid #b47b20;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-block button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: rgb(243, 241, 239);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .service-block button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="taj-mahal.html">Taj Mahal</a></li>
+                <li><a href="#heritage-sites">Heritage Sites</a></li>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#help-support">Help & Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Taj Mahal Section -->
+    <section id="taj-mahal">
+        <h1 style="margin-bottom: 20px;">Taj Mahal</h1>
+        <img src="taj mahal.jpg" alt="Taj Mahal" style="max-width: 70%; height: auto; margin: 20px 0;">
+        <p><strong>Location:</strong> Agra, India</p>
+        <p><strong>Established:</strong> 1632 CE</p>
+        <p><strong>Architect:</strong> Ustad Ahmad Lahori</p>
+
+        <!-- History Section -->
+        <div class="history">
+            <h2>History</h2>
+            <p>The Taj Mahal was commissioned in 1632 by Mughal Emperor Shah Jahan in memory of his favorite wife, Mumtaz Mahal. The construction was completed in 1648, but some parts of the complex were finished in subsequent years. It is an exquisite example of Mughal architecture, blending elements from Islamic, Persian, Ottoman Turkish, and Indian styles.</p>
+
+            <p>Shah Jahan was devastated by the death of Mumtaz Mahal during childbirth, and he vowed to build the most beautiful mausoleum in her honor. The Taj Mahal is built from white marble that reflects hues according to the intensity of sunlight, making it a remarkable sight throughout the day. The complex is set in lush gardens that symbolize paradise, with water channels that enhance its beauty.</p>
+
+            <p>In addition to its architectural beauty, the Taj Mahal is rich in symbolism. The central dome, which rises to 35 meters, is surrounded by four smaller domes and minarets, representing the balance of nature. The intricate inlay work of precious stones into the marble, known as pietra dura, showcases the artistry of Mughal craftsmen.</p>
+
+            <p>Over the years, the Taj Mahal has faced challenges, including environmental issues and pollution, which have caused deterioration of its marble. Conservation efforts have been made to preserve this iconic structure, ensuring that future generations can appreciate its grandeur. In 1983, the Taj Mahal was designated a UNESCO World Heritage Site, recognizing its cultural significance and universal value.</p>
+        </div>
+
+        <!-- Visit Section -->
+        <div class="services">
+            <h2>If you want to visit this beautiful place, see our services:</h2>
+            <div class="service-block">
+                <h3>Food</h3>
+                <p>Enjoy a variety of local cuisines and delicacies.</p>
+                <button onclick="window.location.href='food-services.html'">Visit</button>
+            </div>
+            <div class="service-block">
+                <h3>Shelter</h3>
+                <p>Find comfortable accommodations near the Taj Mahal.</p>
+                <button onclick="window.location.href='shelter-services.html'">Visit</button>
+            </div>
+            <div class="service-block">
+                <h3>Traveling</h3>
+                <p>Explore guided tours and travel arrangements.</p>
+                <button onclick="window.location.href='travel-services.html'">Visit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Terms and Conditions | Privacy Policy</p>
+    </footer>
+</body>
+</html>
